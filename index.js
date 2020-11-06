@@ -14,13 +14,14 @@ client.on("message", async message => {
 
 // Create an event listener for new guild members
 client.on('guildMemberAdd', member => {
+  const guild = member.guild;
   // Send the message to a designated channel on a server:
-  const channel = member.guild.channels.cache.find(ch => ch.name === 'Put your channel Name Here');
+  const channel = member.guild.channels.cache.find(ch => ch.name === 'welcome-and-goodbye');
   // Do nothing if the channel wasn't found on this server
   if (!channel) return;
   // Send the message, mentioning the member
-  channel.send(`Hey ${member}, welcome to **Put your Server Name Here**`);
-  member.send("Have a good time here in **Put your Server Name Here**! Please make sure to read the rules before sending messages. If you have a problem with this server, Dm Yourname for help. ");
+  channel.send(`Hey ${member}, welcome to **${guild.name}!**`);
+  member.send(`Have a good time here in **${guild.name}**! Please make sure to read the rules before sending in #rules. If you have a problem with this server, Dm @ModMail#5460 for help. `);
 });
 
 

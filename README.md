@@ -5,7 +5,7 @@ A simple welcome and goodbye message for your discord bot! It also Dms the user 
 
 # Setup
 
-In the spot where it either says "Put your Server Name Here" or "Put your channel Name Here" fill in those spots
+In the spot where it "Put your channel Name Here" fill in that spot
 with what was told. Read below for more info about why. 
 
 

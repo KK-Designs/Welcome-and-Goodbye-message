@@ -1,5 +1,11 @@
 # Welcome-and-Goodbye-message
 
+---
+
+![NPM Discord.js](https://nodei.co/npm/discord.js.png?downloads=true&stars=true)
+
+---
+
 A simple welcome and goodbye message for your discord bot! It also Dms the user on join using discord.js.
 
 

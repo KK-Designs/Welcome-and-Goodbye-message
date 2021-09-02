@@ -1,12 +1,12 @@
-const Discord = require('discord.js');
-const client = new Discord.Client();
+const { Client, Intents } = require('discord.js');
+const client = new Client({ intents: [ Intents.FLAGS.GUILDS_MESSAGES, Intents.FLAGS.GUILD_MEMBER_ADD, Intents.FLAGS.GUILD_MEMBER_REMOVE ]});
 
 client.once('ready', () => {
 	console.log('Ready!');
   client.user.setActivity(` !help | Serving ${client.guilds.cache.size} servers`, { type: 'LISTENING' });
 });
 
-client.on("message", async message => {
+client.on("messageCreate", async message => {
 	if (message.content === '!ping') {
 		message.channel.send('Pong.');
 	}
@@ -20,8 +20,8 @@ client.on('guildMemberAdd', member => {
   // Do nothing if the channel wasn't found on this server
   if (!channel) return;
   // Send the message, mentioning the member
-  channel.send(`Hey ${member}, welcome to **${guild.name}!**`);
-  member.send(`Have a good time here in **${guild.name}**! Please make sure to read the rules before sending in #rules. If you have a problem with this server, Dm @ModMail#5460 for help. `);
+  channel.send({ content: `Hey ${member}, welcome to **${guild.name}!**` });
+  member.send({ content: `Have a good time here in **${guild.name}**! Please make sure to read the rules before sending in #rules. If you have a problem with this server, Dm @ModMail#5460 for help. ` });
 });
 
 
@@ -32,7 +32,7 @@ client.on('guildMemberRemove', member => {
   // Do nothing if the channel wasn't found on this server
   if (!channel) return;
   // Send the message, mentioning the member
-  channel.send(`${member} just left the server  :c`);
+  channel.send({ content: `${member} just left the server  :c` });
 });
 
 

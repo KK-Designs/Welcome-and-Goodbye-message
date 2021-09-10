@@ -11,7 +11,7 @@ A simple welcome and goodbye message for your discord bot! It also Dms the user 
 
 # Setup
 
-In the spot where it "Put your channel Name Here" fill in that spot
+In the discord dev protal enable the `SERVER MEMBERS INTENT`. Then in the spot where it "Put your channel Name Here" fill in that spot
 with what was told. Read below for more info about why. 
 
 

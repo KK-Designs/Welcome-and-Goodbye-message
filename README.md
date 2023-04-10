@@ -6,7 +6,7 @@
 
 ---
 
-A simple welcome and goodbye message for your discord bot! It also Dms the user on joining using discord.js. Currently works on discord.js v13.12.0. Whether it works on later versions is still being determined.
+A simple welcome and goodbye message for your discord bot! It also Dms the user on joining using discord.js. Currently works on discord.js v13.15.1, v14 support is coming later.
 
 
 # Setup
